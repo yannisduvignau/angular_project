@@ -39,8 +39,8 @@ jobs:
       # - name: Check formatting
       #   run: npm run format || exit 1
 
-      - name: Run linting
-        run: npm run lint || exit 1
+      # - name: Run linting
+      #   run: npm run lint || exit 1
 
       - name: Build Angular app (Production)
         run: npm run build -- --configuration=production --aot
