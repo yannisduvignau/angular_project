@@ -12,6 +12,8 @@ import { NotificationService } from './services/notification/notification.servic
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  title='front';
+
   showToast = false;
   showProgressBar = false;
   toastHeader = '';
