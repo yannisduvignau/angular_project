@@ -1,1 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+// Global Styles
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #132540;
+  --tercery-color: #efefef;
+  --background-color: #fff;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+[data-theme="dark"] {
+  --primary-color: #6c63ff;
+  --secondary-color: #efefef;
+  --tercery-color: #fff;
+  --background-color: #132540;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  overflow-x: hidden;
+
+}
+
+body{
+  background-color: var(--background-color);
+  // transition: background-color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  position: relative;
+}
+
+.with-left-underline, .with-center-underline {
+  display: inline-block;
+}
+
+.with-left-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.with-center-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+h1,
+h2,
+.lang {
+  font-family: "Lilita One", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section {
+  @apply pt-24 px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Poppins", sans-serif; }

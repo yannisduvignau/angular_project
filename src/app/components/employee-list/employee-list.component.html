@@ -1,0 +1,11 @@
+<div *ngIf="employees; else loading" class="mt-10">
+  <ul>
+    <li *ngFor="let item of employees">
+      <p>{{ item.name }}</p>
+    </li>
+  </ul>
+</div>
+
+<ng-template #loading>
+  <p>Chargement des données...</p>
+</ng-template>
